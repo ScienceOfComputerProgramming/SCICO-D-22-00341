@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.papyrus.papygame.feature"
+      label="%featureName"
+      version="0.7.0.qualifier"
+      provider-name="%providerName"
+      os="linux,macosx,win32">
+
+   <description url="https://www.cristal.univ-lille.fr/miny/papygame/">
+      Papyrus Gamification Plugin
+While modeling is now validated as effective for solving complex
+problems or developing complex systems, its widespread and systematic
+application has not yet lived up to expectations. According to
+several studies, the complexity of the modeling languages and
+tools and the lack of required skills in abstraction are part
+of the reasons of this situation. For us, gamification could
+play an important role in order to lower the entry barrier of
+modeling and modeling tools. Gamification is the exploitation
+of gaming mechanisms for serious purposes, like promoting behavioral
+changes, soliciting participation, and engagement in activities.
+Papy Game is a gamified software modeling environment realized
+to design games for specific training/learning goals.
+Includes games Hangman, On your Own, and Flow.
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="">
+      PapyGame Plugin does not collect any personnal information except the content you are creating for the purpose of the exercises. This data is anonimized through your nickname choice.
+   </license>
+
+   <plugin
+         id="org.eclipse.papyrus.gamification"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <requires>
+      <import feature="org.eclipse.papyrus.sdk.feature" version="3.0.0" match="greaterOrEqual"/>
+   </requires>
+
+</feature>

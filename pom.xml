@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.eclipse.papyrus.papygame</groupId>
+		<artifactId>org.eclipse.papyrus.papygame.configuration</artifactId>
+		<version>0.7.0-SNAPSHOT</version>
+		<relativePath>./releng/org.eclipse.papyrus.papygame.configuration</relativePath>
+	</parent>
+
+	<artifactId>org.eclipse.papyrus.papygame.parent</artifactId>
+	<packaging>pom</packaging>
+	<name>PapyGame</name>
+	<description>A Papyrus component for gamification</description>
+	<url>https://eclipse.org/papyrus/components/papygame</url>
+	<inceptionYear>2022</inceptionYear>
+
+	<modules>
+		<module>plugins</module>
+		<module>features</module>
+		<module>releng</module>
+		<module>targetplatform</module>
+	</modules>
+
+	<developers>
+		<developer>
+			<name>Ansgar Radermacher</name>
+			<organization>CEA Tech LIST</organization>
+			<organizationUrl>http://www-list.cea.fr/</organizationUrl>
+			<id>ar</id>
+		</developer>
+		<developer>
+			<name>Xavier Le Pallec</name>
+			<organization>Lille University</organization>
+			<organizationUrl>https://www.univ-lille.fr/</organizationUrl>
+			<id>xlp</id>
+		</developer>
+		<developer>
+			<name>Maxime Savary-Leblanc</name>
+			<organization>CEA Tech LIST</organization>
+			<organizationUrl>https://www.univ-lille.fr/</organizationUrl>
+			<id>msl</id>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>Eclipse Public License</name>
+			<url>https://www.eclipse.org/legal/epl-2.0/</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+</project>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.eclipse.papyrus.papygame</groupId>
+		<artifactId>org.eclipse.papyrus.papygame.parent</artifactId>
+		<version>0.7.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>org.eclipse.papyrus.papygame.targetplatform</artifactId>
+	<packaging>pom</packaging>
+	<name>Designer Target Platform</name>
+	<description>This module contains the different Eclipse target platform definitions.</description>
+	<profiles>
+		<profile>
+			<id>2021-12</id>
+			<activation>
+				<property>
+					<name>eclipse.targetrelease</name>
+					<value>2021-12</value>
+				</property>
+			</activation>
+			<modules>
+				<module>org.eclipse.papyrus.papygame.targetplatform.2021-12</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>2020-06</id>
+			<activation>
+				<property>
+					<name>eclipse.targetrelease</name>
+					<value>2020-06</value>
+				</property>
+			</activation>
+			<modules>
+				<module>org.eclipse.papyrus.papygame.targetplatform.2020-06</module>
+			</modules>
+		</profile>
+	</profiles>
+</project>

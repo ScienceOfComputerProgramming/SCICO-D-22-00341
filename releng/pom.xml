@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.eclipse.papyrus.papygame</groupId>
+		<artifactId>org.eclipse.papyrus.papygame.parent</artifactId>
+		<version>0.7.0-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>org.eclipse.papyrus.papygame.releng</artifactId>
+	<packaging>pom</packaging>
+	<name>PapyGame Releng</name>
+	<description>This plug-in contains the different modules relatives to the releng of PapyGame from update site, to feature, product and rcp.</description>
+	
+	<modules>
+	</modules>
+	
+	<profiles>
+		<!-- Profile dedicated to make the updatesite p2 -->
+		<profile>
+			<id>p2</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
+				<module>org.eclipse.papyrus.papygame.p2</module>
+			</modules>
+		</profile>
+		
+		<!-- Profile dedicated to make the updatesite p2 and the rcp -->
+		<profile>
+			<id>product</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
+				<module>org.eclipse.papyrus.papygame.p2</module>
+				<module>org.eclipse.papyrus.papygame.rcp</module>
+				<module>org.eclipse.papyrus.papygame.product</module>
+				<module>org.eclipse.papyrus.papygame.rcp.feature</module>
+			</modules>
+		</profile>
+	</profiles>
+</project>

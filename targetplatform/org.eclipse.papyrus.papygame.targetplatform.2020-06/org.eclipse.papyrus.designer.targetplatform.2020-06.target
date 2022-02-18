@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><?pde version="3.8"?><target name="Papyrus Designer for Eclipse 2020-06" sequenceNumber="1466666614">
+<locations>
+	<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+		<unit id="org.eclipse.platform.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.rcp.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.jdt.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.pde.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.cdt.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.equinox.p2.discovery.feature.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.m2e.feature.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.papyrus.sdk.feature.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.ocl.uml.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.m2m.qvt.oml.sdk.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.xtext.sdk.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.wst.web_ui.feature.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.json" version="0.0.0"/>
+		<unit id="org.eclipse.acceleo.feature.group" version="0.0.0"/>
+		<repository location="https://download.eclipse.org/releases/2020-06"/>
+	</location>
+	<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+		<unit id="org.eclipse.papyrus.marte.core.feature.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.papyrus.marte.view.feature.feature.group" version="0.0.0"/>
+		<unit id="org.eclipse.papyrus.marte.textedit.feature.feature.group" version="0.0.0"/>
+		<repository id="papyrus-marte" location="https://download.eclipse.org/modeling/mdt/papyrus/components/marte/"/>
+	</location>
+	<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+		<unit id="org.eclipse.papyrus.junit.feature.feature.group" version="0.0.0"/>
+		<repository id="papyrus" location="https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2020-06"/>
+	</location>
+	<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+		<unit id="org.eclipse.papyrus.moka.kernel.animation" version="0.0.0"/>
+		<unit id="org.eclipse.papyrus.moka.tracepoint.service" version="0.0.0"/>
+		<unit id="org.eclipse.papyrus.moka.ui.tracepoint.view" version="0.0.0"/>
+		<repository id="moka" location="https://ci.eclipse.org/papyrus/view/Moka/job/papyrus-moka-master/lastSuccessfulBuild/artifact/releng/org.eclipse.papyrus.moka.p2/target/repository/"/>
+	</location>
+</locations>
+</target>

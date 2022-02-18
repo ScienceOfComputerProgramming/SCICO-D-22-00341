@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="org.eclipse.papyrus.papygame.feature" os="linux,macosx,win32"/>
+</site>
