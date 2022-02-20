@@ -26,7 +26,7 @@ import org.eclipse.papyrus.gamification.modelutils.papyrus.PapyrusAttribute;
 import org.eclipse.papyrus.gamification.modelutils.papyrus.PapyrusNode;
 import org.eclipse.papyrus.gamification.modelutils.papyrus.PapyrusOperation;
 import org.eclipse.papyrus.gamification.modelutils.papyrus.copy.Mask;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.game.GamePlayView;
 import org.eclipse.uml2.uml.NamedElement;
 
@@ -49,7 +49,7 @@ public class HangmanPlayView extends GamePlayView {
 	}
 
 	@Override
-	public void registerJavaScriptFunctions(Browser browser) {
+	public void registerJavaScriptFunctions(BrowserWrapper browser) {
 		// TODO Auto-generated method stub
 		super.registerJavaScriptFunctions(browser);
 	}
@@ -109,7 +109,7 @@ public class HangmanPlayView extends GamePlayView {
 	}
 
 	private void handleGoodMove(String elementName) {
-		System.out.println("GOOD");
+		// System.out.println("GOOD");
 		goodMoveCounter++;
 
 		if (goodMoveCounter < fakeElementsNumber) {
@@ -122,7 +122,7 @@ public class HangmanPlayView extends GamePlayView {
 	}
 
 	private void handleBadMove(String elementName) {
-		System.out.println("BAD");
+		// System.out.println("BAD");
 		badMoveCounter++;
 
 		// In our version of the hangman, we only draw 1-head, 2-body, 3-arms and 4-legs
@@ -153,7 +153,7 @@ public class HangmanPlayView extends GamePlayView {
 	}
 
 	@Override
-	public void onHtmlPageLoaded(Browser browser) {
+	public void onHtmlPageLoaded(BrowserWrapper browser) {
 		super.onHtmlPageLoaded(browser);
 	}
 

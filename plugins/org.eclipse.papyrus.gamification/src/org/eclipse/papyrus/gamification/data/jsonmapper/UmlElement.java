@@ -59,7 +59,7 @@ public class UmlElement {
 			}
 			String appliedStereotype = String.format("%s {%s}", stereotype.getQualifiedName(), attributes); //$NON-NLS-1$
 			appliedStereotypes.add(appliedStereotype);
-			System.err.println(appliedStereotype);
+			// System.err.println(appliedStereotype);
 		}
 	}
 	

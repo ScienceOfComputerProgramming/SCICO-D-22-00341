@@ -59,7 +59,7 @@ public class LoginRemoteDataSource {
 
 					@Override
 					public SingleSource<List<PlayerStatusJson>> apply(List<GameJson> gameJsonList) throws Exception {
-						System.out.println("Got all games : " + gameJsonList);
+						// System.out.println("Got all games : " + gameJsonList);
 						for (GameJson gameJson : gameJsonList) {
 							if ("LOGINGAME".equals(gameJson.getName())) {
 								return loginService.getPlayersOfGame(gameJson.getId(), 2000)
@@ -67,7 +67,7 @@ public class LoginRemoteDataSource {
 
 											@Override
 											public List<PlayerStatusJson> apply(PlayerListJson playerListJson) throws Exception {
-												System.out.println("We got all players : " + playerListJson);
+												// System.out.println("We got all players : " + playerListJson);
 												return playerListJson.getContent();
 											}
 
@@ -87,7 +87,7 @@ public class LoginRemoteDataSource {
 					@Override
 					public MaybeSource<String> apply(List<PlayerStatusJson> playerStatusJsonList) throws Exception {
 						for (PlayerStatusJson playerStatusJson : playerStatusJsonList) {
-							System.out.println("Player is : " + playerStatusJson.getPlayerId());
+							// System.out.println("Player is : " + playerStatusJson.getPlayerId());
 							if (playerStatusJson.getPlayerId().equals(username)) {
 								String encryptedPassword = encryptor.encrypt(password);
 								if (playerStatusJson.getCustomData().getPassword().equals(encryptedPassword)) {
@@ -109,11 +109,11 @@ public class LoginRemoteDataSource {
 
 					@Override
 					public CompletableSource apply(List<GameJson> gameJsonList) throws Exception {
-						System.out.println("Got all games : " + gameJsonList);
+						// System.out.println("Got all games : " + gameJsonList);
 						for (GameJson gameJson : gameJsonList) {
 							if ("LOGINGAME".equals(gameJson.getName())) {
 								String encryptedPassword = encryptor.encrypt(password);
-								System.out.println("Applying for game : " + gameJson.getName());
+								// System.out.println("Applying for game : " + gameJson.getName());
 								UserCreationRequest userCreationRequest = new UserCreationRequest(
 										username,
 										gameJson.getId(),

@@ -16,16 +16,16 @@
 package org.eclipse.papyrus.gamification.view.game;
 
 import org.eclipse.papyrus.gamification.games.framework.communication.OnVideoFinishedItf;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.common.swt.JavascriptFunction;
 
 
 public class JSVideoFinished extends JavascriptFunction {
 
-	Browser browser;
+	BrowserWrapper browser;
 	OnVideoFinishedItf onVideoFinishedItf;
 
-	public JSVideoFinished(Browser browser, OnVideoFinishedItf onVideoFinishedItf) {
+	public JSVideoFinished(BrowserWrapper browser, OnVideoFinishedItf onVideoFinishedItf) {
 		super(browser, "onVideoClosed");
 		this.browser = browser;
 		this.onVideoFinishedItf = onVideoFinishedItf;

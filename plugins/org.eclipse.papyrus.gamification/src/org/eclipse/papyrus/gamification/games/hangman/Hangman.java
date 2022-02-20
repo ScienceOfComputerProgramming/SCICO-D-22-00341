@@ -96,7 +96,7 @@ public class Hangman extends Game {
 
 	@Override
 	public void onHomePageLoaded(Browser browser) {
-		System.out.println("onHomePageLoaded");
+		// System.out.println("onHomePageLoaded");
 		browser.execute("setLevelLabel('" + levelContext.getLevel().getLabel() + "')");
 		browser.execute("setLevelStatement('" + levelContext.getLevel().getStatement() + "')");
 		browser.execute("activeReadyButton();");

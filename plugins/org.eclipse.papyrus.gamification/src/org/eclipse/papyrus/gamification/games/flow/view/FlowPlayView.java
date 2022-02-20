@@ -26,7 +26,7 @@ import org.eclipse.papyrus.gamification.games.oyo.JSTestMyProposition.TestMyProp
 import org.eclipse.papyrus.gamification.modelutils.ModelDisplayManager;
 import org.eclipse.papyrus.gamification.modelutils.papyrus.PapyrusClass;
 import org.eclipse.papyrus.gamification.modelutils.papyrus.PapyrusClassDiagram;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.game.GamePlayView;
 import org.eclipse.papyrus.uml.diagram.common.editparts.ClassEditPart;
 import org.eclipse.uml2.uml.Model;
@@ -53,7 +53,7 @@ public class FlowPlayView extends GamePlayView implements TestMyPropositionInter
 
 
 	@Override
-	public void registerJavaScriptFunctions(Browser browser) {
+	public void registerJavaScriptFunctions(BrowserWrapper browser) {
 		super.registerJavaScriptFunctions(browser);
 		new JSTestMyProposition(browser, this);
 	}
@@ -83,9 +83,9 @@ public class FlowPlayView extends GamePlayView implements TestMyPropositionInter
 	 * @param browser
 	 */
 	@Override
-	public void onHtmlPageLoaded(Browser browser) {
+	public void onHtmlPageLoaded(BrowserWrapper browser) {
 		super.onHtmlPageLoaded(browser);
-		System.out.println("page loaded on FLOW  view");
+		// System.out.println("page loaded on FLOW  view");
 	}
 
 	/**
@@ -124,8 +124,8 @@ public class FlowPlayView extends GamePlayView implements TestMyPropositionInter
 		umlDiagramSolution.setUmlClassDiagram(userUmlClassDiagram);
 		umlDiagramSolution.setTimeSpent(seconds.intValue());
 
-		System.out.println("Almost good");
-		System.out.println("Retrieving time : " + seconds);
+		// System.out.println("Almost good");
+		// System.out.println("Retrieving time : " + seconds);
 
 		endGame(umlDiagramSolution);
 	}

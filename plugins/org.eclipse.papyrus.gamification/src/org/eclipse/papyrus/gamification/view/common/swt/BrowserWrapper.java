@@ -19,27 +19,28 @@ import org.eclipse.papyrus.gamification.data.Logger;
 import org.eclipse.papyrus.gamification.view.common.OsCheck;
 import org.eclipse.papyrus.gamification.view.common.OsCheck.OSType;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.browser.Browser;
 import org.eclipse.swt.browser.ProgressListener;
 import org.eclipse.swt.widgets.Composite;
 
 /**
  * @author maxim
- * A browser wrapper
+ *         A browser wrapper
  */
-public class Browser {
+public class BrowserWrapper {
 
-	private org.eclipse.swt.browser.Browser browser;
+	protected Browser browser;
 
 	/**
 	 * Constructor.
 	 *
 	 */
-	public Browser(Composite parent) {
+	public BrowserWrapper(Composite parent) {
 		boolean isWindows = OsCheck.getOperatingSystemType().equals(OSType.Windows);
-		browser = new org.eclipse.swt.browser.Browser(parent, isWindows ? SWT.EDGE : SWT.NONE);
+		browser = new Browser(parent, isWindows ? SWT.EDGE : SWT.NONE);
+
 		Logger.getInstance().logDebug(getClass(), "Browser", "Created browser for " + OsCheck.getOperatingSystemType());
 	}
-
 
 	public void setBounds(int x, int y, int width, int height) {
 		browser.setBounds(x, y, width, height);
@@ -72,7 +73,13 @@ public class Browser {
 	/**
 	 * @return the current browser
 	 */
-	public org.eclipse.swt.browser.Browser getBrowser() {
+	public Browser getBrowser() {
 		return browser;
+	}
+
+	// might be useful for clean closing, but it currently unused.
+	public void close() {
+		browser.dispose();
+		browser = null;
 	}
 }

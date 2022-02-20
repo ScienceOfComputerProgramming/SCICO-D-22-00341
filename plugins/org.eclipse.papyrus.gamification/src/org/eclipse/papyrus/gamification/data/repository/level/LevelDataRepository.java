@@ -95,9 +95,9 @@ public class LevelDataRepository {
 
 
 												CustomDataJson customDataJson = arg0.getCustomData();
-												System.out.println("Custom were " + customDataJson.toString());
+												// System.out.println("Custom were " + customDataJson.toString());
 												customDataJson.getLevelsCompleted().add(levelCompletedJson);
-												System.out.println("Custom are " + customDataJson.toString());
+												// System.out.println("Custom are " + customDataJson.toString());
 												if (arg0.getCustomData().isLastGameSuccess()) {
 													return levelRemoteDataSource.setPlayerCustomData(
 															levelContext.getSeries().getSeriesGameId(),

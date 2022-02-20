@@ -92,7 +92,7 @@ public class LoginPresenter implements LoginContract.Presenter {
 							public void onError(Throwable throwable) {
 								throwable.printStackTrace();
 								view.showError(throwable);
-								System.out.println("Got error : " + throwable.getMessage());
+								// System.out.println("Got error : " + throwable.getMessage());
 								if (!(throwable instanceof WrongLoginPasswordException)) {
 									Logger.getInstance().logError(this.getClass(), throwable, "createAccount");
 								}
@@ -102,12 +102,8 @@ public class LoginPresenter implements LoginContract.Presenter {
 	}
 
 
-
-
 	@Override
 	public void registerView(org.eclipse.papyrus.gamification.view.login.LoginContract.View view) {
 		this.view = view;
 	}
-
-
 }

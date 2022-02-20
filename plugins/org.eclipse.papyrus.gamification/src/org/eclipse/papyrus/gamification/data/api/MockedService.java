@@ -127,7 +127,7 @@ public class MockedService implements GameManagerService {
 				"    ]\n" +
 				"  }"
 				+ "}";
-		System.out.println("------ Returning MOCKED Player Status response");
+		// System.out.println("------ Returning MOCKED Player Status response");
 		PlayerStatusJson psj = gson.fromJson(JSON2, PlayerStatusJson.class);
 		requestCounter++;
 		return Single.just(psj);
@@ -135,8 +135,8 @@ public class MockedService implements GameManagerService {
 
 	@Override
 	public Completable submitGameResult(String gameId, String actionId, ActionRequestContent content) {
-		System.out.println("Calling submit game query with attributes : \n gameId : " +
-				gameId + " \n actionId : " + actionId + "\n data : " + content.toString());
+		// System.out.println("Calling submit game query with attributes : \n gameId : " +
+		//		gameId + " \n actionId : " + actionId + "\n data : " + content.toString());
 		return RepositoryFactory.getRetrofit().create(GameManagerService.class).submitGameResult(gameId, actionId, content);
 		// return Completable.complete();
 	}
@@ -221,7 +221,7 @@ public class MockedService implements GameManagerService {
 				"    \"seriesGameId\": \"5f885af1857aba00013f54e8\"\n" +
 				"  }\n" +
 				"]";
-		System.out.println("------ Returning MOCKED Available Series response");
+		// System.out.println("------ Returning MOCKED Available Series response");
 		return Single.just(gson.fromJson(input, new TypeToken<List<Series>>() {
 		}.getType()));
 	}

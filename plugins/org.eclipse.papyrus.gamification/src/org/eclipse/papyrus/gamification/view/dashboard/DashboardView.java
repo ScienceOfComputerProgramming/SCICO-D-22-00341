@@ -30,7 +30,7 @@ import org.eclipse.papyrus.gamification.data.entity.SeriesPerformed;
 import org.eclipse.papyrus.gamification.games.framework.LevelExecutor;
 import org.eclipse.papyrus.gamification.games.framework.entity.LevelContext;
 import org.eclipse.papyrus.gamification.view.common.DisplayableView;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.dashboard.JSLevelClicked.LevelClickedInterface;
 import org.eclipse.swt.widgets.Display;
 
@@ -51,7 +51,7 @@ public class DashboardView extends DisplayableView implements DashboardContract.
 	}
 
 	@Override
-	public void registerJavaScriptFunctions(Browser browser) {
+	public void registerJavaScriptFunctions(BrowserWrapper browser) {
 		super.registerJavaScriptFunctions(browser);
 		new JSLevelClicked(browser, this);
 	}
@@ -60,9 +60,9 @@ public class DashboardView extends DisplayableView implements DashboardContract.
 	public void displayPlayerProfile(PlayerProfile playerProfile) {
 		this.currentPlayerProfile = playerProfile;
 
-		System.out.println("DISPLAYPROFILE : " + playerProfile.toString());
+		// System.out.println("DISPLAYPROFILE : " + playerProfile.toString());
 		String playerProfileJSON = (new Gson()).toJson(playerProfile);
-		System.out.println("displayPlayerProfile(" + playerProfileJSON + ");");
+		// System.out.println("displayPlayerProfile(" + playerProfileJSON + ");");
 		callJSScript("displayPlayerProfile(" + playerProfileJSON + ");");
 
 	}
@@ -82,16 +82,16 @@ public class DashboardView extends DisplayableView implements DashboardContract.
 	@Override
 	public void onLevelClicked(String seriesLabel, String levelLabel) {
 		// TODO : improve selection ?
-		System.out.println("onLevelClicked(" + seriesLabel + "," + levelLabel + ")");
+		// System.out.println("onLevelClicked(" + seriesLabel + "," + levelLabel + ")");
 		Level levelToRun = null;
 
 		// TODO DELETE
 		// levelLabel = "GREEN BELT";
 		for (SeriesPerformed seriesPerformed : currentPlayerProfile.getSeriesPerformed()) {
-			System.out.println("Series Performed name : " + seriesPerformed.getName());
+			// System.out.println("Series Performed name : " + seriesPerformed.getName());
 			if (seriesPerformed.getName().equals(seriesLabel)) {
 				for (LevelPerformed level : seriesPerformed.getLevelsPerformed()) {
-					System.out.println("level name : " + level.getLabel());
+					// System.out.println("level name : " + level.getLabel());
 					if (level.getLabel().equals(levelLabel)) {
 						LevelContext levelContext = new LevelContext(level, currentPlayerProfile, seriesPerformed);
 						// LevelContext levelContext = null;
@@ -129,12 +129,12 @@ public class DashboardView extends DisplayableView implements DashboardContract.
 
 
 	@Override
-	public void clearJavascriptFunctions(Browser browser) {
+	public void clearJavascriptFunctions(BrowserWrapper browser) {
 	}
 
 	@Override
-	public void onHtmlPageLoaded(Browser browser) {
-		System.out.println("page loaded on dashboard");
+	public void onHtmlPageLoaded(BrowserWrapper browser) {
+		// System.out.println("page loaded on dashboard");
 
 		this.dashboardPresenter.getPlayerProfile(login);
 		// this.dashboardPresenter.getVideoIntroductionState(login);
@@ -152,7 +152,7 @@ public class DashboardView extends DisplayableView implements DashboardContract.
 								StandardCharsets.UTF_8.toString()));
 			} catch (UnsupportedEncodingException e) {
 				// TODO Auto-generated catch block
-				System.out.println("Could not encode the URL key parameter");
+				// System.out.println("Could not encode the URL key parameter");
 				e.printStackTrace();
 			}
 		}
@@ -165,7 +165,7 @@ public class DashboardView extends DisplayableView implements DashboardContract.
 								StandardCharsets.UTF_8.toString()));
 			} catch (UnsupportedEncodingException e) {
 				// TODO Auto-generated catch block
-				System.out.println("Could not encode the URL key parameter");
+				// System.out.println("Could not encode the URL key parameter");
 				e.printStackTrace();
 			}
 		} else {

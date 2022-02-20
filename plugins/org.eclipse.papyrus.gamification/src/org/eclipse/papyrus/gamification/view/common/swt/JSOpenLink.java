@@ -6,7 +6,7 @@ import org.eclipse.papyrus.gamification.games.framework.communication.OnOpenLink
 public class JSOpenLink extends JavascriptFunction {
 	OnOpenLinkItf openLinkItf;
 
-	public JSOpenLink(Browser browser, OnOpenLinkItf openLinkItf) {
+	public JSOpenLink(BrowserWrapper browser, OnOpenLinkItf openLinkItf) {
 		super(browser, "openLink");
 		this.openLinkItf = openLinkItf;
 	}

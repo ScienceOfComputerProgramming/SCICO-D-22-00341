@@ -78,7 +78,7 @@ public class HangmanCopierObserver implements CopierObserver {
 		try {
 			// TOTO PapyrusUtils.getINSTANCE().setElementVisualVisibility(EObject.class.cast(nameCompartment.getModel()), false);
 		} catch (Exception ex) {
-			System.out.println("didn't manage the doExecuteWithResult");
+			// System.out.println("didn't manage the doExecuteWithResult");
 		}
 	}
 

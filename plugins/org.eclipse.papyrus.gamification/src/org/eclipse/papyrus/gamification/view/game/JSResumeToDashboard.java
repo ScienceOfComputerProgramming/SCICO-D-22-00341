@@ -16,7 +16,7 @@
 package org.eclipse.papyrus.gamification.view.game;
 
 import org.eclipse.papyrus.gamification.games.framework.communication.OnResumeToDashboardItf;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.common.swt.JavascriptFunction;
 
 
@@ -26,10 +26,10 @@ import org.eclipse.papyrus.gamification.view.common.swt.JavascriptFunction;
  */
 public class JSResumeToDashboard extends JavascriptFunction {
 
-	Browser browser;
+	BrowserWrapper browser;
 	OnResumeToDashboardItf onResumeToDashboardItf;
 
-	public JSResumeToDashboard(Browser browser, OnResumeToDashboardItf onResumeToDashboardItf) {
+	public JSResumeToDashboard(BrowserWrapper browser, OnResumeToDashboardItf onResumeToDashboardItf) {
 		super(browser, "resumeToDashboard");
 		this.browser = browser;
 		this.onResumeToDashboardItf = onResumeToDashboardItf;

@@ -16,7 +16,7 @@
 package org.eclipse.papyrus.gamification.view.game;
 
 import org.eclipse.papyrus.gamification.view.common.DisplayableView;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 
 /**
  * @author maximesavaryleblanc
@@ -48,7 +48,7 @@ public class GameView extends DisplayableView {
 	 * @param browser
 	 */
 	@Override
-	public void clearJavascriptFunctions(Browser browser) {
+	public void clearJavascriptFunctions(BrowserWrapper browser) {
 		// TODO Auto-generated method stub
 
 	}
@@ -69,7 +69,7 @@ public class GameView extends DisplayableView {
 	 * @param browser
 	 */
 	@Override
-	public void onHtmlPageLoaded(Browser browser) {
+	public void onHtmlPageLoaded(BrowserWrapper browser) {
 		// TODO Auto-generated method stub
 
 	}

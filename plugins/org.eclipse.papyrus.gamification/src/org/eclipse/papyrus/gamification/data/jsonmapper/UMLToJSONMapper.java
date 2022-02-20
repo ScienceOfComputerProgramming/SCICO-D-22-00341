@@ -48,7 +48,7 @@ public class UMLToJSONMapper {
 		for (Element e : retrieveElements(m)) {
 			if (e instanceof Class) {
 				classDiagram.addClass(mapClass(e));
-				// System.out.println(mapClass(e).toString());
+				// // System.out.println(mapClass(e).toString());
 			}
 			if (e instanceof Relationship) {
 				relationSet.add((Relationship) e);
@@ -65,15 +65,15 @@ public class UMLToJSONMapper {
 				UmlRelationship r2 = mapRelationship(r, associationTypeMap, multiplicityMap, isDirectedMap);
 				if (r2 != null) {
 					classDiagram.addRelationship(r2);
-					// System.out.println("---> " + r2.toString());
+					// // System.out.println("---> " + r2.toString());
 				} else {
-					System.out.println("Could not map relationship: " + r2);
+					// System.out.println("Could not map relationship: " + r2);
 				}
 			}
 		}
 
 		return classDiagram;
-		// System.out.println((new Gson()).toJson(classDiagram));
+		// // System.out.println((new Gson()).toJson(classDiagram));
 	}
 
 	private static void computeRelationInformation(Set<Relationship> relationSet,
@@ -141,7 +141,7 @@ public class UMLToJSONMapper {
 							boolean isDirected = false;
 							for (Property prop : association.getAllAttributes()) {
 								isDirected = isDirected || prop.isNavigable();
-								System.out.println("%% " + prop.isNavigable());
+								// System.out.println("%% " + prop.isNavigable());
 
 							}
 							return isDirected;
@@ -155,7 +155,7 @@ public class UMLToJSONMapper {
 							String aggregation = "none";
 							for (Property prop : association.getAllAttributes()) {
 								String currentAggregation = prop.getAggregation().getLiteral().toString();
-								System.out.println("%% " + currentAggregation);
+								// System.out.println("%% " + currentAggregation);
 								if (!("none".equals(currentAggregation))) {
 									aggregation = currentAggregation;
 								}
@@ -283,7 +283,7 @@ public class UMLToJSONMapper {
 				}
 			} else {
 				umlRelationship = null;
-				System.out.println("Could not map relationship: " + relationship);
+				// System.out.println("Could not map relationship: " + relationship);
 			}
 		}
 

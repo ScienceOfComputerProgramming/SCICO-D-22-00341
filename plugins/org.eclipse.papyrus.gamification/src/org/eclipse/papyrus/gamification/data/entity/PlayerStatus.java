@@ -9,7 +9,7 @@ public class PlayerStatus {
 		this.pointsNumber = pointsNumber;
 		this.goldCoinsNumber = goldCoinsNumber;
 		this.currentLevel = currentLevel;
-		System.out.println("Creating new player profile : " + pointsNumber + " - " + goldCoinsNumber + " - " + currentLevel);
+		// System.out.println("Creating new player profile : " + pointsNumber + " - " + goldCoinsNumber + " - " + currentLevel);
 	}
 
 	public PlayerStatus computeProgression(PlayerStatus olderPlayerStatus) {

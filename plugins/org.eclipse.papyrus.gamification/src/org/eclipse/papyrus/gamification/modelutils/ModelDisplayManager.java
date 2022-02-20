@@ -69,7 +69,7 @@ public class ModelDisplayManager {
 			Diagram levelDiagram = null;
 
 			if ((level.getDiagramToLoadName() != null) && !level.getDiagramToLoadName().isEmpty()) {
-				System.out.println("Diagram to load is : " + level.getDiagramToLoadName());
+				// System.out.println("Diagram to load is : " + level.getDiagramToLoadName());
 				levelDiagram = responseModel.getDiagram(level.getDiagramToLoadName());
 			} else {
 				levelDiagram = responseModel.getDiagram(level.getDiagramName());

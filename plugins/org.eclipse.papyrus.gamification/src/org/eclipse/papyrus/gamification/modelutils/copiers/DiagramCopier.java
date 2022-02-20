@@ -215,9 +215,9 @@ public class DiagramCopier {
 		for (Object originalConnector : getSourceDiagram().getEdges()) {
 			if (originalConnector instanceof Connector) {
 				Connector connector = Connector.class.cast(originalConnector);
-				System.out.println("CONNECTOR ===== " + connector.getElement().getClass());
-				System.out.println(connector.getSource());
-				System.out.println(connector.getTarget());
+				// System.out.println("CONNECTOR ===== " + connector.getElement().getClass());
+				// System.out.println(connector.getSource());
+				// System.out.println(connector.getTarget());
 				if (connector.getElement() instanceof Association) {
 					if (getCopierObserver().canICopyElement(connector.getElement())) {
 						getAssociationCopier().copy(connector);

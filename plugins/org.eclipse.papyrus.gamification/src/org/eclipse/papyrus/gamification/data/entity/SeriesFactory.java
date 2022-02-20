@@ -38,7 +38,7 @@ public class SeriesFactory {
 		 * levels.add(new Level("Level 3", HANGMAN_CLASSNAME, "/responses/Gamification/Library", "Level 2", "Nothing to say", ""));
 		 * levels.add(new Level("Level 4", HANGMAN_CLASSNAME, "/responses/Gamification/Library", "Level 2", "Nothing to say", ""));
 		 * levels.add(new Level("Level 5", HANGMAN_CLASSNAME, "/responses/Gamification/Library", "Level 2", "Nothing to say", ""));
-		 */System.out.println(new Gson().toJson(series));
+		 */// System.out.println(new Gson().toJson(series));
 		return series;
 	}
 
@@ -62,7 +62,7 @@ public class SeriesFactory {
 		 * levels.add(new Level("Level 7", HANGMAN_CLASSNAME, "/responses/Gamification/Library", "Level 3", "Nothing to say", ""));
 		 * levels.add(new Level("Level 8", HANGMAN_CLASSNAME, "/responses/Gamification/Library", "Level 4", "Nothing to say", ""));
 		 */
-		System.out.println((new Gson()).toJson(series));
+		// System.out.println((new Gson()).toJson(series));
 		return series;
 	}
 

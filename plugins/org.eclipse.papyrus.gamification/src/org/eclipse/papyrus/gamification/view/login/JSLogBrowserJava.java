@@ -1,14 +1,14 @@
 package org.eclipse.papyrus.gamification.view.login;
 
 import org.eclipse.papyrus.gamification.data.Logger;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.common.swt.JavascriptFunction;
 
 public class JSLogBrowserJava extends JavascriptFunction {
 
-	Browser browser;
+	BrowserWrapper browser;
 
-	public JSLogBrowserJava(Browser browser) {
+	public JSLogBrowserJava(BrowserWrapper browser) {
 		super(browser, "logBrowserJava");
 		this.browser = browser;
 	}
@@ -17,7 +17,7 @@ public class JSLogBrowserJava extends JavascriptFunction {
 	public Object functionBody(Object[] args) {
 
 		try {
-			System.out.println("Calling JS LOG BROWSER");
+			// System.out.println("Calling JS LOG BROWSER");
 			Logger.getInstance().logDebug(this.getClass(), "Browser Information", String.class.cast(args[0]));
 		} catch (Exception ex) {
 			ex.printStackTrace();

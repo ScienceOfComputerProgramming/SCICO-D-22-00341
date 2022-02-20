@@ -103,9 +103,9 @@ public class ClassDiagramCopier {
 	protected void copyAttributesOfClasses() {
 
 		for (PapyrusClass clazz : originDiagram.getClasses()) {
-			System.out.println("We have class : " + clazz);
-			System.out.println("Map is : " + originToTargetMap);
-			System.out.println("Origin to target :  : " + originToTargetMap.get(clazz));
+			// System.out.println("We have class : " + clazz);
+			// System.out.println("Map is : " + originToTargetMap);
+			// System.out.println("Origin to target :  : " + originToTargetMap.get(clazz));
 			// TODO check Xavier
 			if (originToTargetMap.get(clazz) != null) {
 				PapyrusClass newClass = PapyrusClass.class.cast(originToTargetMap.get(clazz));
@@ -247,7 +247,7 @@ public class ClassDiagramCopier {
 
 					map(generalization, newGeneralization);
 				} catch (Exception e) {
-					System.out.println("Error while creating generalization");
+					// System.out.println("Error while creating generalization");
 					e.printStackTrace();
 				}
 			}
@@ -266,7 +266,7 @@ public class ClassDiagramCopier {
 					if (associationMask.isNameMentioned()) {
 						associationName = "toDefine";
 					}
-					System.out.println("Association irignal : " + association);
+					// System.out.println("Association irignal : " + association);
 					PapyrusClassifier target = PapyrusClassifier.class.cast(originToTargetMap.get(association.getSourceEnd().getType()));
 					PapyrusClassifier source = PapyrusClassifier.class.cast(originToTargetMap.get(association.getTargetEnd().getType()));
 
@@ -275,8 +275,8 @@ public class ClassDiagramCopier {
 
 						PapyrusAssociationEnd[] ends = { association.getSourceEnd(), association.getTargetEnd() };
 						PapyrusAssociationEnd[] newEnds = { newAssociation.getSourceEnd(), newAssociation.getTargetEnd() };
-						System.out.println("Ends1 : " + ends);
-						System.out.println("Ends2 : " + newEnds);
+						// System.out.println("Ends1 : " + ends);
+						// System.out.println("Ends2 : " + newEnds);
 
 						for (int i = 0; i < ends.length; i++) {
 							PapyrusAssociationEnd end = ends[i];
@@ -316,7 +316,7 @@ public class ClassDiagramCopier {
 
 						map(association, newAssociation);
 					} catch (Exception e) {
-						System.out.println("Error while creating association");
+						// System.out.println("Error while creating association");
 						e.printStackTrace();
 					}
 				}

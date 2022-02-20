@@ -16,16 +16,16 @@
 package org.eclipse.papyrus.gamification.view.game;
 
 import org.eclipse.papyrus.gamification.games.framework.communication.OnPlayerReadyItf;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.common.swt.JavascriptFunction;
 
 
 public class JSPlayerReady extends JavascriptFunction {
 
-	Browser browser;
+	BrowserWrapper browser;
 	OnPlayerReadyItf playerReadyItf;
 
-	public JSPlayerReady(Browser browser, OnPlayerReadyItf playerReadyItf) {
+	public JSPlayerReady(BrowserWrapper browser, OnPlayerReadyItf playerReadyItf) {
 		super(browser, "playerReady");
 		this.browser = browser;
 		this.playerReadyItf = playerReadyItf;

@@ -25,7 +25,7 @@ import org.eclipse.papyrus.gamification.games.framework.communication.OnSecondsR
 import org.eclipse.papyrus.gamification.games.framework.entity.LevelContext;
 import org.eclipse.papyrus.gamification.games.framework.entity.PapyrusContext;
 import org.eclipse.papyrus.gamification.modelutils.ModelChangesListenerAdapter;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.common.swt.JSOnSecondsReady;
 import org.eclipse.uml2.uml.Model;
 
@@ -38,20 +38,20 @@ public abstract class GamePlayView extends GameView implements OnModelChangedItf
 	private OnGameEndedItf onGameEndedItf;
 	protected LevelContext levelContext;
 	protected PapyrusContext papyrusContext;
-	protected Browser browser;
+	protected BrowserWrapper browser;
 
 	public GamePlayView(LevelContext levelContext, PapyrusContext papyrusContext, OnGameEndedItf onGameEndedItf) {
 		this.onGameEndedItf = onGameEndedItf;
 		this.papyrusContext = papyrusContext;
 		this.levelContext = levelContext;
-		System.out.println("PapyContext is " + papyrusContext);
-		System.out.println("LevelContext is " + levelContext);
+		// System.out.println("PapyContext is " + papyrusContext);
+		// System.out.println("LevelContext is " + levelContext);
 	}
 
 
 	@Override
-	public void registerJavaScriptFunctions(Browser browser) {
-		System.out.println("Register JS functions is " + browser);
+	public void registerJavaScriptFunctions(BrowserWrapper browser) {
+		// System.out.println("Register JS functions is " + browser);
 
 		super.registerJavaScriptFunctions(browser);
 		new JSOnSecondsReady(browser, this);
@@ -101,7 +101,7 @@ public abstract class GamePlayView extends GameView implements OnModelChangedItf
 
 
 	@Override
-	public void onHtmlPageLoaded(Browser browser) {
+	public void onHtmlPageLoaded(BrowserWrapper browser) {
 		super.onHtmlPageLoaded(browser);
 		callJSScript("setLevelStatement(`" + levelContext.getLevel().getStatement().replace("'", "\'") + "`)");
 	}

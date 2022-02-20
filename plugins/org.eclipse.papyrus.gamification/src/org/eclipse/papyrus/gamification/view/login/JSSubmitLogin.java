@@ -1,14 +1,14 @@
 package org.eclipse.papyrus.gamification.view.login;
 
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.common.swt.JavascriptFunction;
 
 public class JSSubmitLogin extends JavascriptFunction {
 
-	Browser browser;
+	BrowserWrapper browser;
 	LoginSubmitInterface loginSubmitInterface;
 
-	public JSSubmitLogin(Browser browser, LoginSubmitInterface loginItf) {
+	public JSSubmitLogin(BrowserWrapper browser, LoginSubmitInterface loginItf) {
 		super(browser, "submitLogin");
 		this.browser = browser;
 		this.loginSubmitInterface = loginItf;
@@ -44,7 +44,6 @@ public class JSSubmitLogin extends JavascriptFunction {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-
 
 		return "";
 	}

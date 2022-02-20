@@ -56,7 +56,7 @@ public class DashboardPresenter implements DashboardContract.Presenter {
 							@Override
 							public void onError(Throwable throwable) {
 								throwable.printStackTrace();
-								System.out.println("Got error : " + throwable.getMessage());
+								// System.out.println("Got error : " + throwable.getMessage());
 								Logger.getInstance().logError(this.getClass(), throwable, "getVideoIntroductionState");
 							}
 
@@ -85,14 +85,14 @@ public class DashboardPresenter implements DashboardContract.Presenter {
 							@Override
 							public void onError(Throwable throwable) {
 								throwable.printStackTrace();
-								System.out.println("Got error : " + throwable.getMessage());
+								// System.out.println("Got error : " + throwable.getMessage());
 								Logger.getInstance().logError(this.getClass(), throwable, "getPlayerProfile");
 
 							}
 
 							@Override
 							public void onSuccess(PlayerProfile playerProfile) {
-								System.out.println("Got profile : " + playerProfile.toString());
+								// System.out.println("Got profile : " + playerProfile.toString());
 								if (view != null) {
 									view.displayPlayerProfile(playerProfile);
 								}
@@ -112,14 +112,14 @@ public class DashboardPresenter implements DashboardContract.Presenter {
 							@Override
 							public void onError(Throwable throwable) {
 								throwable.printStackTrace();
-								System.out.println("Got error : " + throwable.getMessage());
+								// System.out.println("Got error : " + throwable.getMessage());
 								Logger.getInstance().logError(this.getClass(), throwable, "setVideoShown");
 
 							}
 
 							@Override
 							public void onComplete() {
-								System.out.println("Video has been registered as shown");
+								// System.out.println("Video has been registered as shown");
 							}
 
 

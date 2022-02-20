@@ -56,7 +56,7 @@ public class LevelRemoteDataSource {
 
 		actionRequestContent.setData(arcd);
 
-		System.out.println("Request to Submit game result remoteLevel");
+		// System.out.println("Request to Submit game result remoteLevel");
 		return gameManagerService.submitGameResult(actionRequestContent.getGameId(), actionRequestContent.getActionId(), actionRequestContent);
 	}
 
@@ -69,12 +69,12 @@ public class LevelRemoteDataSource {
 
 		actionRequestContent.setData(umlDiagramSolution);
 
-		System.out.println("Request to Submit game result remoteLevel");
+		// System.out.println("Request to Submit game result remoteLevel");
 		return gameManagerService.submitGameResult(actionRequestContent.getGameId(), actionRequestContent.getActionId(), actionRequestContent);
 	}
 
 	Single<PlayerStatusJson> getPlayerStatus(String gameId, String playerId) {
-		System.out.println("--- Retrieving remote Player Status");
+		// System.out.println("--- Retrieving remote Player Status");
 
 		return gameManagerService.getPlayerStatus(gameId, playerId);
 		/*
@@ -82,8 +82,8 @@ public class LevelRemoteDataSource {
 		 *
 		 * @Override
 		 * public PlayerStatus apply(PlayerStatusJson jsonStatus) throws Exception {
-		 * System.out.println("GET PLAYER STATUS ============");
-		 * System.out.println(jsonStatus.toString());
+		 * // System.out.println("GET PLAYER STATUS ============");
+		 * // System.out.println(jsonStatus.toString());
 		 * return new PlayerStatus(
 		 * jsonStatus.getState().getPoints(),
 		 * jsonStatus.getState().getGoldCoins(),

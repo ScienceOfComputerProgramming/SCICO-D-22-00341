@@ -61,7 +61,7 @@ public class ResponseModel {
 
 		this.pathFileNameWithoutExtension = pathFileNameWithoutExtension;
 		try {
-			System.out.println("Loading response model with : " + pathFileNameWithoutExtension);
+			// System.out.println("Loading response model with : " + pathFileNameWithoutExtension);
 			// final URI notationUri = URI.createPlatformPluginURI(pathFileNameWithoutExtension + NOTATION_SUFFIX, false);
 			// final URI umlUri = URI.createPlatformPluginURI(pathFileNameWithoutExtension + MODEL_SUFFIX, false);
 			// final URI diagramUri = URI.createPlatformPluginURI(pathFileNameWithoutExtension + DIAGRAM_SUFFIX, false);
@@ -88,9 +88,9 @@ public class ResponseModel {
 			responsesModelSet.loadModels(getNotationURI(isReponseModelInternal));
 			responsesModelSet.loadModels(getDiagramURI(isReponseModelInternal));
 
-			System.out.println("URL : " + getUmlURI(isReponseModelInternal));
-			System.out.println("URL : " + getNotationURI(isReponseModelInternal));
-			System.out.println("URL : " + getDiagramURI(isReponseModelInternal));
+			// System.out.println("URL : " + getUmlURI(isReponseModelInternal));
+			// System.out.println("URL : " + getNotationURI(isReponseModelInternal));
+			// System.out.println("URL : " + getDiagramURI(isReponseModelInternal));
 
 			EcoreUtil.resolveAll(responsesModelSet);
 
@@ -134,20 +134,20 @@ public class ResponseModel {
 	/*
 	 * public String getDiagramURI() {
 	 * return "http://www.cristal.univ-lille.fr/miny/papyrus/responses/Library.di";
-	 * // System.out.println(cacheFolderAbsolutePath() + "/" + CACHE_FILENAME_WITHOUT_EXT + DIAGRAM_SUFFIX);
+	 * // // System.out.println(cacheFolderAbsolutePath() + "/" + CACHE_FILENAME_WITHOUT_EXT + DIAGRAM_SUFFIX);
 	 * // return cacheFolderAbsolutePath() + "/" + CACHE_FILENAME_WITHOUT_EXT + DIAGRAM_SUFFIX;
 	 * }
 	 *
 	 * public String getUmlURI() {
 	 * return "http://www.cristal.univ-lille.fr/miny/papyrus/responses/Library.uml";
-	 * // System.out.println(cacheFolderAbsolutePath() + "/" + CACHE_FILENAME_WITHOUT_EXT + MODEL_SUFFIX);
+	 * // // System.out.println(cacheFolderAbsolutePath() + "/" + CACHE_FILENAME_WITHOUT_EXT + MODEL_SUFFIX);
 	 * // return cacheFolderAbsolutePath() + "/" + CACHE_FILENAME_WITHOUT_EXT + MODEL_SUFFIX;
 	 * }
 	 */
 	public Diagram getDiagram(String diagramName) {
-		System.out.println("ModelSet is " + responsesModelSet);
+		// System.out.println("ModelSet is " + responsesModelSet);
 
-		System.out.println(DiagramUtils.getAllNotationDiagram(responsesModelSet, diagramName));
+		// System.out.println(DiagramUtils.getAllNotationDiagram(responsesModelSet, diagramName));
 		return DiagramUtils.getNotationDiagram(responsesModelSet, diagramName);
 	}
 
@@ -184,7 +184,7 @@ public class ResponseModel {
 			}
 			reader.close();
 		} catch (IOException exception) {
-			System.out.println(exception);
+			// System.out.println(exception);
 		}
 		return fileContent.toString();
 	}

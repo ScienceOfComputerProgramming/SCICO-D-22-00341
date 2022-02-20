@@ -111,8 +111,8 @@ public class PapyrusAssociation extends PapyrusLink {
 			return new PapyrusAssociationEnd(this, getSemanticElement().getOwnedEnds().get(0));
 		}
 		for (Property relationProperty : getSemanticElement().getAllAttributes()) {
-			System.out.println("Current property is : " + relationProperty);
-			System.out.println("Current owner is : " + relationProperty.getOwner());
+			// System.out.println("Current property is : " + relationProperty);
+			// System.out.println("Current owner is : " + relationProperty.getOwner());
 
 			// If owner is class then it is the source
 			if (relationProperty.getOwner() instanceof Class) {

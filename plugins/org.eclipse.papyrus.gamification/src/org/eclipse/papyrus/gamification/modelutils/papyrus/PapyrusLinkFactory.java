@@ -92,10 +92,10 @@ public class PapyrusLinkFactory {
 		 * }
 		 */
 		// AssociationEditPart linkEditPart = AssociationEditPart.class.cast(createLink(papyrusDiagram, UMLDIElementTypes.ASSOCIATION_NON_DIRECTED_EDGE, AssociationEditPart.class, sourceElement, targetElement));
-		System.out.println("Creating association NODE");
+		// System.out.println("Creating association NODE");
 
 		AssociationEditPart linkEditPart = AssociationEditPart.class.cast(createLink(papyrusDiagram, UMLDIElementTypes.ASSOCIATION_COMPOSITE_DIRECTED_EDGE, AssociationEditPart.class, sourceElement, targetElement));
-		System.out.println("Edit part is " + linkEditPart);
+		// System.out.println("Edit part is " + linkEditPart);
 
 		PapyrusAssociation papyrusAssociation = papyrusDiagram.getPapyrusAssociation(linkEditPart);
 		papyrusAssociation.setName(associationName);

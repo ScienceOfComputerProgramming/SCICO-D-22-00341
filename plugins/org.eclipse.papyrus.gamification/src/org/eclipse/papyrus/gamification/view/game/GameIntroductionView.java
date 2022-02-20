@@ -18,7 +18,7 @@ package org.eclipse.papyrus.gamification.view.game;
 import org.eclipse.papyrus.gamification.games.framework.communication.OnCancelGameItf;
 import org.eclipse.papyrus.gamification.games.framework.communication.OnPlayerReadyItf;
 import org.eclipse.papyrus.gamification.games.framework.entity.LevelContext;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.swt.widgets.Display;
 
 /**
@@ -39,20 +39,20 @@ public class GameIntroductionView extends GameView implements OnPlayerReadyItf, 
 	}
 
 	@Override
-	public void registerJavaScriptFunctions(Browser browser) {
+	public void registerJavaScriptFunctions(BrowserWrapper browser) {
 		super.registerJavaScriptFunctions(browser);
 		new JSPlayerReady(browser, this);
 		new JSCancelGame(browser, onCancelGameItf);
 	}
 
 	@Override
-	public void clearJavascriptFunctions(Browser browser) {
+	public void clearJavascriptFunctions(BrowserWrapper browser) {
 		// TODO Auto-generated method stub
 		super.clearJavascriptFunctions(browser);
 	}
 
 	@Override
-	public void onHtmlPageLoaded(Browser browser) {
+	public void onHtmlPageLoaded(BrowserWrapper browser) {
 		super.onHtmlPageLoaded(browser);
 		initiateVideo(levelContext.getLevel().getVideoToShowUrl());
 		callJSScript("setLevelLabel('" + levelContext.getLevel().getLabel().replace("'", "\'") + "')");

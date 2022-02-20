@@ -1,14 +1,14 @@
 package org.eclipse.papyrus.gamification.view.dashboard;
 
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.common.swt.JavascriptFunction;
 
 public class JSLevelClicked extends JavascriptFunction {
 
-	Browser browser;
+	BrowserWrapper browser;
 	LevelClickedInterface levelClickedItf;
 
-	public JSLevelClicked(Browser browser, LevelClickedInterface levelClickedItf) {
+	public JSLevelClicked(BrowserWrapper browser, LevelClickedInterface levelClickedItf) {
 		super(browser, "levelClicked");
 		this.browser = browser;
 		this.levelClickedItf = levelClickedItf;

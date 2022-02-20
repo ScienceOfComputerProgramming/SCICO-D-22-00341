@@ -15,7 +15,7 @@
 
 package org.eclipse.papyrus.gamification.games.oyo;
 
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.common.swt.JavascriptFunction;
 
 /**
@@ -24,14 +24,14 @@ import org.eclipse.papyrus.gamification.view.common.swt.JavascriptFunction;
  */
 public class JSTestMyProposition extends JavascriptFunction {
 
-	Browser browser;
+	BrowserWrapper browser;
 	TestMyPropositionInterface testPropositionItf;
 
 	public interface TestMyPropositionInterface {
 		public void userAsksToTest();
 	}
 
-	public JSTestMyProposition(Browser browser, TestMyPropositionInterface testPropositionItf) {
+	public JSTestMyProposition(BrowserWrapper browser, TestMyPropositionInterface testPropositionItf) {
 		super(browser, "testMyProposition");
 		this.browser = browser;
 		this.testPropositionItf = testPropositionItf;

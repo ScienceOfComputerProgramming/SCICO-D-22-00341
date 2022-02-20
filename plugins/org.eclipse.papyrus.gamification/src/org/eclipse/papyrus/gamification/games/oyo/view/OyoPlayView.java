@@ -23,7 +23,7 @@ import org.eclipse.papyrus.gamification.games.oyo.DiagramComparator;
 import org.eclipse.papyrus.gamification.games.oyo.JSTestMyProposition;
 import org.eclipse.papyrus.gamification.games.oyo.JSTestMyProposition.TestMyPropositionInterface;
 import org.eclipse.papyrus.gamification.modelutils.papyrus.PapyrusClassDiagram;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.game.GamePlayView;
 
 /**
@@ -47,7 +47,7 @@ public class OyoPlayView extends GamePlayView implements TestMyPropositionInterf
 
 
 	@Override
-	public void registerJavaScriptFunctions(Browser browser) {
+	public void registerJavaScriptFunctions(BrowserWrapper browser) {
 		super.registerJavaScriptFunctions(browser);
 		new JSTestMyProposition(browser, this);
 	}
@@ -77,9 +77,9 @@ public class OyoPlayView extends GamePlayView implements TestMyPropositionInterf
 	 * @param browser
 	 */
 	@Override
-	public void onHtmlPageLoaded(Browser browser) {
+	public void onHtmlPageLoaded(BrowserWrapper browser) {
 		super.onHtmlPageLoaded(browser);
-		System.out.println("page loaded on oyo view");
+		// System.out.println("page loaded on oyo view");
 	}
 
 	/**
@@ -120,8 +120,8 @@ public class OyoPlayView extends GamePlayView implements TestMyPropositionInterf
 		gameMetrics.setErrors(propositionCounter - 1);
 		gameMetrics.setOkMoves(propositionCounter);
 		gameMetrics.setTimeSpent(seconds.intValue());
-		System.out.println("Almost good");
-		System.out.println("Retrieving time : " + seconds);
+		// System.out.println("Almost good");
+		// System.out.println("Retrieving time : " + seconds);
 
 		endGame(gameMetrics);
 	}

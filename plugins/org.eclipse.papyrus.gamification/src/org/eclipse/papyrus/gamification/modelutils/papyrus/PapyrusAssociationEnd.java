@@ -83,12 +83,12 @@ public class PapyrusAssociationEnd extends PapyrusAttribute {
 		try {
 			getSemanticElement().setIsNavigable(anotherEnd.getSemanticElement().isNavigable());
 		} catch (IllegalStateException e) {
-			System.out.println("Exception raised when modifying property");
+			// System.out.println("Exception raised when modifying property");
 		}
 		try {
 			getSemanticElement().setAggregation(anotherEnd.getSemanticElement().getAggregation());
 		} catch (IllegalStateException e) {
-			System.out.println("Exception raised when modifying property");
+			// System.out.println("Exception raised when modifying property");
 		}
 	}
 

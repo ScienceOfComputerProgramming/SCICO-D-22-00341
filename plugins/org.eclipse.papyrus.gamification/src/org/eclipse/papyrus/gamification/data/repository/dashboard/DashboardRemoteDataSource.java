@@ -18,12 +18,12 @@ public class DashboardRemoteDataSource {
 	}
 
 	Single<List<Series>> getAvailableSeries() {
-		System.out.println("--- Retrieving remote Available Series");
+		// System.out.println("--- Retrieving remote Available Series");
 		return gameManagerService.getAvailableSeries("http://papygame.com/papyrus-plugin/json/availableSeriesFlow.json");
 	}
 
 	Single<PlayerStatusJson> getPlayerStatus(String gameId, String playerId) {
-		System.out.println("--- Retrieving remote Player Status");
+		// System.out.println("--- Retrieving remote Player Status");
 		return gameManagerService.getPlayerStatus(gameId, playerId);
 
 	}

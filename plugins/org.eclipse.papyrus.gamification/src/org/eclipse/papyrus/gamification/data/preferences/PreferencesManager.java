@@ -42,12 +42,12 @@ public class PreferencesManager {
 
 	public void setVideoShown(String playerId) throws BackingStoreException {
 		sub.put("videoShown-" + playerId, "1");
-		System.out.println("Pref : " + generalPreferences);
-		System.out.println("Sub : " + sub);
+		// System.out.println("Pref : " + generalPreferences);
+		// System.out.println("Sub : " + sub);
 		// forces the application to save the preferences
 		sub.flush();
 
-		System.out.println("AFTERSOTRING : " + sub.get("videoShown-" + playerId, "0"));
+		// System.out.println("AFTERSOTRING : " + sub.get("videoShown-" + playerId, "0"));
 
 	}
 

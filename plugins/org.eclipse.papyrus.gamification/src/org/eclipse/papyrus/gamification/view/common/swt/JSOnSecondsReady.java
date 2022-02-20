@@ -6,7 +6,7 @@ import org.eclipse.papyrus.gamification.games.framework.communication.OnSecondsR
 public class JSOnSecondsReady extends JavascriptFunction {
 	OnSecondsReadyItf onSecondsReadyItf;
 
-	public JSOnSecondsReady(Browser browser, OnSecondsReadyItf onSecondsReadyItf) {
+	public JSOnSecondsReady(BrowserWrapper browser, OnSecondsReadyItf onSecondsReadyItf) {
 		super(browser, "onSecondsReady");
 		this.onSecondsReadyItf = onSecondsReadyItf;
 	}

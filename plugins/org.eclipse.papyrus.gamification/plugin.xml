@@ -8,7 +8,7 @@
 		</category>
 		<view
 			name="PapyGame"
-			icon="icons/sample.png"
+			icon="icons/papygame-16x16.png"
 			class="org.eclipse.papyrus.gamification.view.MainView"
 			id="org.eclipse.papyrus.gamification.view"
 			category="gamification"
@@ -17,5 +17,13 @@
 		</view>
 	</extension>
 	
-
+	<extension
+			point="org.eclipse.ui.perspectives">
+		<perspective
+				class="org.eclipse.papyrus.gamification.perspective.PapyGamePerspective"
+				icon="platform:/plugin/org.eclipse.papyrus.gamification/icons/papygame-16x16.png"
+				id="org.eclipse.papyrus.gamification.perspective"
+				name="PapyGame">
+		</perspective>
+	</extension>
 </plugin>

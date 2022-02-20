@@ -8,7 +8,7 @@
       <text>
          Papyrus security (Beta - Incubation)
 
-(c) Copyright Eclipse contributors and others 2000, 2016.  All rights reserved.
+(c) Copyright Eclipse contributors and others 2000, 2022.  All rights reserved.
 Visit http://www.eclipse.org/platform
 
 This product includes software developed by the
@@ -22,7 +22,7 @@ Apache Software Foundation http://www.apache.org/
    <launcherArgs>
       <programArgs>-showsplash org.eclipse.papyrus.papygame.rcp --launcher.XXMaxPermSize 256m
       </programArgs>
-      <vmArgs>-Xms256m -Xmx1024m
+      <vmArgs>-Xms256m -Xmx1024m -Declipse.log.level=WARNING
       </vmArgs>
       <vmArgsMac>-Xdock:icon=../Resources/papyrus.icns -XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
@@ -200,7 +200,7 @@ Java and all Java-based trademarks are trademarks of Oracle Corporation in the U
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="3" />
       <property name="org.eclipse.update.reconcile" value="false" />
-      <property name="osgi.instance.area.default" value="@user.home/workspace-papyrus" />
+      <property name="osgi.instance.area.default" value="@user.home/workspace-papygame" />
       <property name="osgi.bundles.defaultStartLevel" value="4" />
    </configurations>
 

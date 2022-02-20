@@ -52,7 +52,7 @@ public class Logger {
 			addr = InetAddress.getLocalHost();
 			hostname = addr.getHostName();
 		} catch (UnknownHostException ex) {
-			System.out.println("Hostname can not be resolved");
+			// System.out.println("Hostname can not be resolved");
 		}
 
 	}

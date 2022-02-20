@@ -74,7 +74,7 @@ public class PlayerModel {
 	 * }
 	 *
 	 * public static void deleteInstance() {
-	 * System.out.println("maman " + getInstance().editor);
+	 * // System.out.println("maman " + getInstance().editor);
 	 * INSTANCE = null;
 	 *
 	 * }
@@ -82,7 +82,7 @@ public class PlayerModel {
 
 	public PlayerModel(String modelName) {
 		this(PROJECT_NAME, modelName);
-		System.out.println("Creating player model with name : " + modelName);
+		// System.out.println("Creating player model with name : " + modelName);
 	}
 
 	@SuppressWarnings("deprecation")
@@ -169,7 +169,7 @@ public class PlayerModel {
 	}
 
 	public static URI getUserProjectUri() {
-		System.out.println("Looking for project " + PROJECT_NAME);
+		// System.out.println("Looking for project " + PROJECT_NAME);
 		return ResourcesPlugin.getWorkspace().getRoot().getProject(PROJECT_NAME).getLocationURI();
 	}
 

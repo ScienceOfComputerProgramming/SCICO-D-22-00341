@@ -21,7 +21,7 @@ import java.net.URL;
 import org.eclipse.papyrus.gamification.Preferences;
 import org.eclipse.papyrus.gamification.games.framework.communication.OnOpenLinkItf;
 import org.eclipse.papyrus.gamification.games.framework.communication.OnVideoFinishedItf;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.common.swt.JSOpenLink;
 import org.eclipse.papyrus.gamification.view.game.JSVideoFinished;
 import org.eclipse.ui.PartInitException;
@@ -33,9 +33,9 @@ import org.eclipse.ui.PlatformUI;
  */
 public abstract class DisplayableView implements OnVideoFinishedItf, OnOpenLinkItf {
 
-	protected Browser browser;
+	protected BrowserWrapper browser;
 
-	public void registerJavaScriptFunctions(Browser browser) {
+	public void registerJavaScriptFunctions(BrowserWrapper browser) {
 		this.browser = browser;
 		new JSVideoFinished(browser, this);
 		new JSOpenLink(browser, this);
@@ -47,7 +47,7 @@ public abstract class DisplayableView implements OnVideoFinishedItf, OnOpenLinkI
 		// Do Nothing
 	};
 
-	abstract public void clearJavascriptFunctions(Browser browser);
+	abstract public void clearJavascriptFunctions(BrowserWrapper browser);
 
 	public void stop() {
 		// Do Nothing
@@ -56,10 +56,10 @@ public abstract class DisplayableView implements OnVideoFinishedItf, OnOpenLinkI
 	/**
 	 * @param browser
 	 */
-	abstract public void onHtmlPageLoaded(Browser browser);
+	abstract public void onHtmlPageLoaded(BrowserWrapper browser);
 
 	protected void initiateVideo(String videoUrl) {
-		System.out.println("Video : " + videoUrl);
+		// System.out.println("Video : " + videoUrl);
 		if ((videoUrl == null) || (videoUrl.isEmpty())) {
 			onVideoFinished();
 		} else {
@@ -77,17 +77,17 @@ public abstract class DisplayableView implements OnVideoFinishedItf, OnOpenLinkI
 		try {
 			if (isResultExpected) {
 				browser.evaluate(script);
-				System.out.println("Calling JS evaluate : " + script);
-				System.out.println("Result is : " + browser.evaluate(script));
+				// System.out.println("Calling JS evaluate : " + script);
+				// System.out.println("Result is : " + browser.evaluate(script));
 
 				return browser.evaluate(script);
 			} else {
-				System.out.println("Calling JS execute : " + script);
+				// System.out.println("Calling JS execute : " + script);
 				return browser.execute(script);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Error : " + e);
+			// System.out.println("Error : " + e);
 		}
 		return null;
 	}
@@ -95,7 +95,6 @@ public abstract class DisplayableView implements OnVideoFinishedItf, OnOpenLinkI
 	protected Object callJSScript(String script) {
 		return callJSScript(script, false);
 	}
-
 
 	@Override
 	public void onOpenLink(String url) {

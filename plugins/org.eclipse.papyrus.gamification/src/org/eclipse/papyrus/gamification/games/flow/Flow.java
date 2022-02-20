@@ -91,7 +91,7 @@ public class Flow extends Game {
 
 	@Override
 	public void onHomePageLoaded(Browser browser) {
-		System.out.println("onHomePageLoaded");
+		// System.out.println("onHomePageLoaded");
 		browser.execute("setLevelLabel('" + levelContext.getLevel().getLabel() + "')");
 		browser.execute("setLevelStatement('" + levelContext.getLevel().getStatement() + "')");
 		browser.execute("activeReadyButton();");
@@ -123,7 +123,7 @@ public class Flow extends Game {
 
 	@Override
 	public String getLevelPathToLoad(LevelContext levelContext) {
-		System.out.println("Level is : " + levelContext.toString());
+		// System.out.println("Level is : " + levelContext.toString());
 		if (levelContext.getLevel().getDiagramToLoadName() == null) {
 			return null;
 		}

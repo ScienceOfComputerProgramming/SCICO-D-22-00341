@@ -77,7 +77,7 @@ public class LevelExecutor implements LevelContract.Executor, OnPlayerReadyItf, 
 	@Override
 	public void onPlayerReady() {
 		// Player clicked "I'm ready", we can start the game
-		System.out.println("Player is now ready to play !");
+		// System.out.println("Player is now ready to play !");
 
 		ResponseModel responseModel = null;
 
@@ -85,7 +85,7 @@ public class LevelExecutor implements LevelContract.Executor, OnPlayerReadyItf, 
 		// games where UML diagram must be checked (OYO and HANGMAN)
 		// Get ResponseModel for the current level: load model from path in LevelDescription
 
-		System.out.println("Level path to load is : " + currentGame.getLevelPathToLoad(currentLevelContext));
+		// System.out.println("Level path to load is : " + currentGame.getLevelPathToLoad(currentLevelContext));
 		if (currentGame.getLevelPathToLoad(currentLevelContext) != null) {
 			responseModel = levelPresenter.loadResponseModel(
 					currentGame.getLevelPathToLoad(currentLevelContext),
@@ -130,7 +130,7 @@ public class LevelExecutor implements LevelContract.Executor, OnPlayerReadyItf, 
 
 	@Override
 	public void onGameScoreReceived(GameScore gameScore) {
-		System.out.println("Received submission results : " + gameScore.toString());
+		// System.out.println("Received submission results : " + gameScore.toString());
 
 		if (gameScore.isGameSuccess()) {
 			ViewManager.getInstance().displayView(currentGame.getGameSucessView(currentLevelContext, this, gameScore));
@@ -142,7 +142,7 @@ public class LevelExecutor implements LevelContract.Executor, OnPlayerReadyItf, 
 	@Override
 	public void onResumeToDashboard() {
 		// TODO Auto-generated method stub
-		System.out.println("Resume to dashboard now !");
+		// System.out.println("Resume to dashboard now !");
 
 		this.currentLevelContext = null;
 		this.currentGame = null;

@@ -54,7 +54,7 @@ public class DashboardDataRepository {
 								.map(new Function<PlayerStatusJson, SeriesPerformed>() {
 									@Override
 									public SeriesPerformed apply(PlayerStatusJson playerStatus) throws Exception {
-										System.out.println("boolean is : " + playerStatus.getCustomData().isQuestionnaireFilled());
+										// System.out.println("boolean is : " + playerStatus.getCustomData().isQuestionnaireFilled());
 										playerProfile.computeQuestionnaireBoolean(playerStatus.getCustomData().isQuestionnaireFilled());
 										playerProfile.addGoldCoins(playerStatus.getState().getGoldCoins());
 										playerProfile.addXP(playerStatus.getState().getPoints());

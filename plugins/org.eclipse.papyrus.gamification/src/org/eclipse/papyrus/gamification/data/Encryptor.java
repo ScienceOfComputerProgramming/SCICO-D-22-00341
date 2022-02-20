@@ -38,8 +38,8 @@ public class Encryptor {
 		this.key = Hex.decodeHex("6250655368566D5971337477397A24432646294A404E635166546A576E5A7234");
 		this.iv = Hex.decodeHex("564af9633b9f5ac0b1218843f6d4b059");
 
-		System.out.println("key (" + key.length + "): " + key);
-		System.out.println("iv (" + iv.length + "): " + iv);
+		// System.out.println("key (" + key.length + "): " + key);
+		// System.out.println("iv (" + iv.length + "): " + iv);
 
 
 	}

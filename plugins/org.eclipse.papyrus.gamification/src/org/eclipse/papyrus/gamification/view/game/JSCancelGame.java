@@ -16,7 +16,7 @@
 package org.eclipse.papyrus.gamification.view.game;
 
 import org.eclipse.papyrus.gamification.games.framework.communication.OnCancelGameItf;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.common.swt.JavascriptFunction;
 
 /**
@@ -25,10 +25,10 @@ import org.eclipse.papyrus.gamification.view.common.swt.JavascriptFunction;
  */
 public class JSCancelGame extends JavascriptFunction {
 
-	Browser browser;
+	BrowserWrapper browser;
 	OnCancelGameItf onCancelGameItf;
 
-	public JSCancelGame(Browser browser, OnCancelGameItf onCancelGameItf) {
+	public JSCancelGame(BrowserWrapper browser, OnCancelGameItf onCancelGameItf) {
 		super(browser, "cancel");
 		this.browser = browser;
 		this.onCancelGameItf = onCancelGameItf;

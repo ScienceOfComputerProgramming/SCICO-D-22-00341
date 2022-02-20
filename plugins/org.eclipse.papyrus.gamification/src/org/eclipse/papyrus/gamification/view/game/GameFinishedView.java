@@ -18,7 +18,7 @@ package org.eclipse.papyrus.gamification.view.game;
 import org.eclipse.papyrus.gamification.data.entity.GameScore;
 import org.eclipse.papyrus.gamification.games.framework.communication.OnResumeToDashboardItf;
 import org.eclipse.papyrus.gamification.games.framework.entity.LevelContext;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 
 import com.google.gson.Gson;
 
@@ -40,7 +40,7 @@ public class GameFinishedView extends GameView implements OnResumeToDashboardItf
 	}
 
 	@Override
-	public void registerJavaScriptFunctions(Browser browser) {
+	public void registerJavaScriptFunctions(BrowserWrapper browser) {
 		super.registerJavaScriptFunctions(browser);
 		new JSResumeToDashboard(browser, onResumeToDashboardItf);
 	}
@@ -52,7 +52,7 @@ public class GameFinishedView extends GameView implements OnResumeToDashboardItf
 	}
 
 	@Override
-	public void onHtmlPageLoaded(Browser browser) {
+	public void onHtmlPageLoaded(BrowserWrapper browser) {
 		super.onHtmlPageLoaded(browser);
 		callJSScript("displayResults(" + (new Gson()).toJson(gameScore) + ")");
 	}

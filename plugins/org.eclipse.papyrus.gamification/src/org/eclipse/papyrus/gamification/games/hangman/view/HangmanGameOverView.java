@@ -18,7 +18,7 @@ package org.eclipse.papyrus.gamification.games.hangman.view;
 import org.eclipse.papyrus.gamification.data.entity.GameScore;
 import org.eclipse.papyrus.gamification.games.framework.communication.OnResumeToDashboardItf;
 import org.eclipse.papyrus.gamification.games.framework.entity.LevelContext;
-import org.eclipse.papyrus.gamification.view.common.swt.Browser;
+import org.eclipse.papyrus.gamification.view.common.swt.BrowserWrapper;
 import org.eclipse.papyrus.gamification.view.game.GameFinishedView;
 
 /**
@@ -34,7 +34,7 @@ public class HangmanGameOverView extends GameFinishedView {
 	}
 
 	@Override
-	public void registerJavaScriptFunctions(Browser browser) {
+	public void registerJavaScriptFunctions(BrowserWrapper browser) {
 		// TODO Auto-generated method stub
 		super.registerJavaScriptFunctions(browser);
 	}
@@ -46,7 +46,7 @@ public class HangmanGameOverView extends GameFinishedView {
 	}
 
 	@Override
-	public void onHtmlPageLoaded(Browser browser) {
+	public void onHtmlPageLoaded(BrowserWrapper browser) {
 		super.onHtmlPageLoaded(browser);
 
 		// TODO set content

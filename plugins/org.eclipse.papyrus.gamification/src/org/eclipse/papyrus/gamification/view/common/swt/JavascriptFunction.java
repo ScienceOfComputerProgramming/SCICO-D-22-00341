@@ -21,8 +21,10 @@ package org.eclipse.papyrus.gamification.view.common.swt;
  */
 public abstract class JavascriptFunction {
 
-	public JavascriptFunction(Browser browser, String functionName) {
-		new JavascriptFunction.Vanilla(browser.getBrowser(), functionName);
+	Vanilla fct;
+	
+	public JavascriptFunction(BrowserWrapper browser, String functionName) {
+		fct = new JavascriptFunction.Vanilla(browser.getBrowser(), functionName);
 	}
 
 	public abstract Object functionBody(Object[] args);
