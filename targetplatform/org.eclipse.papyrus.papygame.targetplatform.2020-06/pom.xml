@@ -9,5 +9,5 @@
 	<artifactId>org.eclipse.papyrus.papygame.targetplatform.2020-06</artifactId>
 	<packaging>eclipse-target-definition</packaging>
 	<name>org.eclipse.papyrus.papygame.targetplatform.2020-06</name>
-	<description>This plug-in contains the target definition for Papyrus Designer in 2020-06.</description>
+	<description>This plug-in contains the target definition for PapyGame in 2020-06.</description>
 </project>

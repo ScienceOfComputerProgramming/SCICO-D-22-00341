@@ -192,6 +192,16 @@
 					<version>${jarsigner.version}</version>
 				</plugin>
 				<plugin>
+					<groupId>org.eclipse.cbi.maven.plugins</groupId>
+					<artifactId>eclipse-macsigner-plugin</artifactId>
+					<version>${jarsigner.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.cbi.maven.plugins</groupId>
+					<artifactId>eclipse-winsigner-plugin</artifactId>
+					<version>${jarsigner.version}</version>
+				</plugin>
+				<plugin>
 					<!-- https://github.com/jbosstools/jbosstools-maven-plugins/wiki -->
 					<groupId>org.jboss.tools.tycho-plugins</groupId>
 					<artifactId>repository-utils</artifactId>
@@ -337,7 +347,6 @@
 
 	<!-- Profiles -->
 	<profiles>
-	
 		<profile>
 			<id>eclipse-sign</id>
 			<build>
