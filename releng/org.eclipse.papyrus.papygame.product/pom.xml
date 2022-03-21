@@ -79,6 +79,7 @@
 						<artifactId>eclipse-macsigner-plugin</artifactId>
 						<configuration>
 							<fileNames>papygame.app</fileNames>
+							<entitlements>${project.basedir}/application.entitlement</entitlements>
 						</configuration>
 						<executions>
 							<execution>
