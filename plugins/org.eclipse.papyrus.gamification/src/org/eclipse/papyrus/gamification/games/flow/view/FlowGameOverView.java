@@ -35,14 +35,12 @@ public class FlowGameOverView extends GameFinishedView {
 
 	@Override
 	public void registerJavaScriptFunctions(BrowserWrapper browser) {
-		// TODO Auto-generated method stub
 		super.registerJavaScriptFunctions(browser);
 	}
 
 	@Override
 	public String getHtmlPath() {
-		// TODO Auto-generated method stub
-		return "/html/games/flow/html/gameover.html";
+		return "/html/gameover.html"; //$NON-NLS-1$
 	}
 
 	@Override

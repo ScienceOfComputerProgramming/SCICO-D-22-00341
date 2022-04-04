@@ -58,7 +58,7 @@ public class UmlParameter extends UmlElement {
 				+ ", type="	+ type
 				+ ", lowerMultiplicity=" + lowerMultiplicity
 				+ ", upperMultiplicity=" + upperMultiplicity
-				+ ",\n getAppliedStereotypes()=" + getAppliedStereotypes()
-				+ "]";
+				+ ", getAppliedStereotypes()=" + getAppliedStereotypes()
+				+ "\n]";
 	}
 }

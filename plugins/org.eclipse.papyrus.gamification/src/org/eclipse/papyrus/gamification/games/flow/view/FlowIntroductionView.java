@@ -38,7 +38,6 @@ public class FlowIntroductionView extends GameIntroductionView {
 
 	@Override
 	public String getHtmlPath() {
-		return "/html/games/flow/html/intro.html";
+		return "/html/games/flow/html/intro.html"; //$NON-NLS-1$
 	}
-
 }

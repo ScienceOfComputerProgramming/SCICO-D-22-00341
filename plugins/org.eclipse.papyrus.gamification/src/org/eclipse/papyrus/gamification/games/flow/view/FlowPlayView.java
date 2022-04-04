@@ -60,7 +60,7 @@ public class FlowPlayView extends GamePlayView implements TestMyPropositionInter
 
 	@Override
 	public String getHtmlPath() {
-		return "/html/games/flow/html/game.html";
+		return "/html/games/flow/html/game.html"; //$NON-NLS-1$
 	}
 
 	public void onGameEnded(boolean success, int goodMoves, int badMoves) {
@@ -108,7 +108,6 @@ public class FlowPlayView extends GamePlayView implements TestMyPropositionInter
 			userUmlClassDiagram = UMLToJSONMapper.map(m);
 			getSpentTime();
 		}
-
 	}
 
 
@@ -129,7 +128,4 @@ public class FlowPlayView extends GamePlayView implements TestMyPropositionInter
 
 		endGame(umlDiagramSolution);
 	}
-
-
-
 }

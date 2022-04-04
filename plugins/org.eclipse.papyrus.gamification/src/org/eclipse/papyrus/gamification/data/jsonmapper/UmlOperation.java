@@ -48,7 +48,7 @@ public class UmlOperation extends UmlElement {
 				+ ", numberOfParameters=" + numberOfParameters
 				+ ", parameters=" + parameters
 				+ ", getNumberOfParameters()=" + getNumberOfParameters() 
-				+ ",\n getAppliedStereotypes()=" + getAppliedStereotypes()
-				+ "]";
+				+ ", getAppliedStereotypes()=" + getAppliedStereotypes()
+				+ "\n]";
 	}
 }
