@@ -47,7 +47,7 @@ public class UmlProperty extends UmlElement {
 				+ ", upperMultiplicity=" + upperMultiplicity
 				+ ", lowerMultiplicity=" + lowerMultiplicity
 				+ ", type=" + type
-				+ ",\n getAppliedStereotypes()=" + getAppliedStereotypes()
-				+ "]";
+				+ ", getAppliedStereotypes()=" + getAppliedStereotypes()
+				+ "\n]";
 	}
 }
