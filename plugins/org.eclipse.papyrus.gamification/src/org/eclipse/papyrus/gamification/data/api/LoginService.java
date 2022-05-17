@@ -18,18 +18,18 @@ import retrofit2.http.Query;
 public interface LoginService {
 
 
-	@GET("/gamification-v3/model/game")
+	@GET("/gamification/model/game")
 	Single<List<GameJson>> getAllGames();
 
-	@GET("/gamification-v3/gengine/state/{gameId}")
+	@GET("/gamification/gengine/state/{gameId}")
 	Single<PlayerListJson> getPlayersOfGame(@Path("gameId") String gameId, @Query("size") int sizeOfPage);
 
-	@POST("/gamification-v3/data/game/{gameId}/player/{playerId}")
+	@POST("/gamification/data/game/{gameId}/player/{playerId}")
 	Completable createPlayerForGame(@Path("gameId") String gameId,
 			@Path("playerId") String playerId,
 			@Body UserCreationRequest content);
 
-	@POST("/gamification-v3/exec/game/{gameId}/action/{actionId}")
+	@POST("/gamification/exec/game/{gameId}/action/{actionId}")
 	Completable invitePlayer(@Path("gameId") String gameId,
 			@Path("actionId") String actionId,
 			@Body SponsorRequest content);

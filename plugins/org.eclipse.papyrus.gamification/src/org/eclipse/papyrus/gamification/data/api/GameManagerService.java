@@ -21,18 +21,18 @@ public interface GameManagerService {
 	@GET
 	Single<List<Series>> getAvailableSeries(@Url String fullUrl);
 
-	@GET("/gamification-v3/data/game/{gameId}/player/{playerId}")
+	@GET("/gamification/data/game/{gameId}/player/{playerId}")
 	Single<PlayerStatusJson> getPlayerStatus(@Path("gameId") String gameId, @Path("playerId") String playerId);
 
 	// POST /exec/game/{gameId}/action/{actionId}
-	@POST("/gamification-v3/exec/game/{gameId}/action/{actionId}")
+	@POST("/gamification/exec/game/{gameId}/action/{actionId}")
 	Completable submitGameResult(@Path("gameId") String gameId,
 			@Path("actionId") String actionId,
 			@Body ActionRequestContent content);
 
 
 	/// data/game/{gameId}/player/{playerId}/custom
-	@PUT("/gamification-v3/data/game/{gameId}/player/{playerId}/custom")
+	@PUT("/gamification/data/game/{gameId}/player/{playerId}/custom")
 	Completable setPlayerCustomData(@Path("gameId") String gameId, @Path("playerId") String playerId, @Body CustomDataJson content);
 
 

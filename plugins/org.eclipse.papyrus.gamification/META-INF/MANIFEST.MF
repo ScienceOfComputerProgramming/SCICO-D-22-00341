@@ -28,8 +28,8 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.20.0",
  org.eclipse.papyrus.junit.utils;bundle-version="2.3.0",
  com.google.guava;bundle-version="30.1.0",
  org.eclipse.jface,
- com.google.gson;bundle-version="2.8.8",
- org.eclipse.papyrus.uml.perspective;bundle-version="2.0.0"
+ org.eclipse.papyrus.uml.perspective;bundle-version="2.0.0",
+ com.google.gson
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: org.eclipse.papyrus.gamification
 Import-Package: org.eclipse.papyrus.editor,
