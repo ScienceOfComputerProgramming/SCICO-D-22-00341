@@ -14,24 +14,19 @@
 	<name>org.eclipse.papyrus.papygame.p2</name>
 	<description>This plugin defines the update site of PapyGame plugins and feature.</description>
 
-	<pluginRepositories>
-		<pluginRepository>
-			<id>org.jboss.tools.tycho-plugins</id>
-			<url>https://repository.jboss.org/</url>
-		</pluginRepository>
-	</pluginRepositories>
-
 	<build>
 		<plugins>
 			<!-- workaround https://bugs.eclipse.org/bugs/show_bug.cgi?id=453708 -->
 			<plugin>
-				<groupId>org.jboss.tools.tycho-plugins</groupId>
-				<artifactId>repository-utils</artifactId>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-plugin</artifactId>
+				<version>${tycho.version}</version>
 				<executions>
 					<execution>
-					<phase>package</phase>
+						<id>attach-p2-metadata</id>
+						<phase>package</phase>
 						<goals>
-							<goal>generate-repository-facade</goal>
+							<goal>p2-metadata</goal>
 						</goals>
 						<configuration>
 						<!-- components update facade -->
