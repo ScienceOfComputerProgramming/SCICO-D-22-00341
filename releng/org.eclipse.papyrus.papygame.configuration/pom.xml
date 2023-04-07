@@ -16,8 +16,8 @@
 		<component.rcp.name>org.eclipse.papyrus.papygame.rcp</component.rcp.name>
         <target.version>0.7.0-SNAPSHOT</target.version>
 
-		<tycho.version>2.7.2</tycho.version>
-		<tycho.extras.version>2.7.2</tycho.extras.version>
+		<tycho.version>2.7.5</tycho.version>
+		<tycho.extras.version>2.7.5</tycho.extras.version>
 		<xtend.version>2.21.0</xtend.version>
 
 		<!-- plugin versions -->
