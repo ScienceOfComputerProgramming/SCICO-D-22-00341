@@ -297,7 +297,6 @@
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
 				<configuration>
-					<includePackedArtifacts>true</includePackedArtifacts>
 					<targetDefinitionIncludeSource>honor</targetDefinitionIncludeSource>
 					<environments>
 						<environment>
@@ -338,9 +337,6 @@
 					<plugin>
 						<groupId>org.eclipse.tycho</groupId>
 						<artifactId>target-platform-configuration</artifactId>
-						<configuration>
-							<includePackedArtifacts>true</includePackedArtifacts>
-						</configuration>
 					</plugin>
 					<plugin>
 						<groupId>org.eclipse.cbi.maven.plugins</groupId>
@@ -382,9 +378,6 @@
 					<plugin>
 						<groupId>org.eclipse.tycho</groupId>
 						<artifactId>target-platform-configuration</artifactId>
-						<configuration>
-							<includePackedArtifacts>true</includePackedArtifacts>
-						</configuration>
 					</plugin>
 					<plugin>
 						<groupId>org.eclipse.tycho</groupId>
