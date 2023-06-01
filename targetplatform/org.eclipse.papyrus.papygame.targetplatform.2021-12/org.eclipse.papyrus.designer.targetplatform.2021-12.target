@@ -21,7 +21,7 @@
 	</location>
 	<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 		<unit id="org.eclipse.papyrus.junit.feature.feature.group" version="0.0.0"/>
-		<repository location="https://download.eclipse.org/modeling/mdt/papyrus/updates/nightly/master"/>
+		<repository location="https://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2021-12"/>
 	</location>
 	<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 		<unit id="org.eclipse.papyrus.marte.core.feature.feature.group" version="0.0.0"/>
@@ -33,7 +33,7 @@
 		<unit id="org.eclipse.papyrus.moka.kernel.animation" version="0.0.0"/>
 		<unit id="org.eclipse.papyrus.moka.tracepoint.service" version="0.0.0"/>
 		<unit id="org.eclipse.papyrus.moka.ui.tracepoint.view" version="0.0.0"/>
-		<repository id="moka" location="https://ci.eclipse.org/papyrus/view/Moka/job/papyrus-moka-master/lastSuccessfulBuild/artifact/releng/org.eclipse.papyrus.moka.p2/target/repository/"/>
+		<repository id="moka" location="https://download.eclipse.org/modeling/mdt/papyrus/components/moka/2022-12"/>
 	</location>
 	<location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
 		<unit id="org.eclipse.justj.openjdk.hotspot.jre.full.feature.group" version="0.0.0"/>
